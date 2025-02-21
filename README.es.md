@@ -61,4 +61,6 @@ Si los scripts se ejecutan correctamente, el modelo se generará en la misma car
   - [torch](https://pypi.org/project/torch/) (2.6.0)
   - [transformers (con PyTorch)](https://huggingface.co/docs/transformers/en/installation)
   - [accelerate](https://pypi.org/project/accelerate/) (0.26.0)
+- Otros:
+  - Modelo Base: [xlm-roberta-base](https://huggingface.co/FacebookAI/xlm-roberta-base)
 - IDE Recomendado: [VS Code](https://code.visualstudio.com/)
