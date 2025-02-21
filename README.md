@@ -61,4 +61,6 @@ If the scripts ran succesfully, the model will be generated in the same folder t
   - [torch](https://pypi.org/project/torch/) (2.6.0)
   - [transformers (with PyTorch)](https://huggingface.co/docs/transformers/en/installation)
   - [accelerate](https://pypi.org/project/accelerate/) (0.26.0)
+- Other:
+  - Model Base: [xlm-roberta-base](https://huggingface.co/FacebookAI/xlm-roberta-base)
 - Recommended IDE: [VS Code](https://code.visualstudio.com/)
