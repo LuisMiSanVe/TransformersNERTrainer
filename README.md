@@ -1,84 +1,64 @@
-> [See in spanish/Ver en español](https://github.com/LuisMiSanVe/template-repos/blob/main/README.es.md)
-# 😀 Repository's Title
-[![image](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://dotnet.microsoft.com/en-us/languages/csharp)
-[![image](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet)
-[![image](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![image](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)](https://www.newtonsoft.com/json)
-[![image](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
-[![image](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://aistudio.google.com/app/apikey)
-[![image](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)](https://visualstudio.microsoft.com/)
-[![image](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)](https://jwt.io/introduction)
-[![image](https://img.shields.io/badge/apache%20netbeans-1B6AC6?style=for-the-badge&logo=apache%20netbeans%20IDE&logoColor=white)](https://netbeans.apache.org/front/main/index.html)
-[![image](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
-[![image](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-[![image](https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/es/index.html)
-[![image](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=white)](https://httpd.apache.org/)
-[![image](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![image](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
-[![image](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)]()
-[![image](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
-[![image](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)](https://console.firebase.google.com/)
-[![image](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
-[![image](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/studio)
+> [Ver en ingles/See in english](https://github.com/LuisMiSanVe/TransformersNERTrainer/blob/main/README.md)
+# 🤗 Entrenador de Modelos NER Transformers
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 [![image](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)](https://pytorch.org/)
-[![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 
->[!NOTE]
-> NOTE
+Entrena tu propio modelo NER usando Transformers de HuggingFace con estos Scripts.
 
-> [!WARNING]
-> WARNING
+## 📝 Explicación de Tecnología
+Un Modelo NER (Named Entity Recognition o Reconocimiento de Entidades Nombradas) es una herramienta de IA capaz de reconocer palabras y patrones y clasificarlos, dependiento de los datos con los que haya sido entrenado.\
+Existen modelos ya entrenados como  [SpaCy](https://spacy.io/) pero con este simple Script puedes entrenar tus propios modelos con sets de datos personalizados.
 
-> ANNOTATION
-
-BRIEF DESCRIPTION
-
-<img src="https://github.com/LuisMiSanVe/LuisMiSanVe/blob/main/Resources/ShopManager/image.png" width="50" alt="Image Alt">
-
+## 🛠️ Instalación
+Obviamente necesitarás Python para instalar las dependencias y ejecutar los scripts.\
+Abre un CMD e instala las dependencias necesarias:
 ```
-CODE
+pip install transformers datasets seqeval scikit-learn torch transformers[torch] accelerate>=0.26.0
+```
+O si te falla o tienes una versión más nueva de Python:
+```
+py -m pip install transformers datasets seqeval scikit-learn torch transformers[torch] accelerate>=0.26.0
+```
+Verifica que Python esté en el PATH de Windows
+`C:\Users\USER_NAME\AppData\Local\Programs\Python\Python313\Scripts`
+
+> [!NOTE]
+> La carpeta `Python313\` representa que la versión instalada es la '3.13', si tienes otra versión, cambialo.
+
+## 🚀 Explicación de uso del proyecto
+En [trainmodel.py](https://github.com/LuisMiSanVe/TransformersNERTrainer/blob/main/trainmodel.py), cambia el set de datos por defecto con los datos con los que quieres entrenar tu modelo NER (explicado en los comentarios).\
+En la `linea 77` están los argumentos de entrenamiento, puedes cambiarlos para probar como salen los resultados.\
+Ejecuta el script de entrenamiento con:
+```
+python trainmodel.py
+```
+O si te falla o tienes una versión más nueva de Python:
+```
+py trainmodel.py
+```
+Ahora, en [inferencemodel.py](https://github.com/LuisMiSanVe/TransformersNERTrainer/blob/main/inferencemodel.py), cambia el mapa de etiquetas para que coincida con el usado en el entrenamiento.\
+Ejecuta el script de inferencia:
+```
+python inferencemodel.py
+```
+O si te falla o tienes una versión más nueva de Python:
+```
+py inferencemodel.py
 ```
 
-## 📝 Technology Explanation
-Explanation
+## 📂 Archivos
+Si los scripts se ejecutan correctamente, el modelo se generará en la misma carpeta, estos ficheros son:
+- **my_ner_model**: aqui se guarda toda la información y configuración del modelo.
+- **ner_model**: aqui se guardan los diferentes Checkpoints del modelo.
 
-## 📋 Prerequisites
-Prerequisites
-
-## 🛠️ Setup
-Setup
-
-## 🚀 Project Usage Explanation
-Usage
-
-## 📖 About the Project
-About
-
-## 📂 Files
-Files
-
-## 🎨 Customization Options
-Options
-
-## 🚀 Releases
-The version will be released using these versioning policies:
-
-- A new version will drop when a major feature is added. When a bug is fixed in the repository, instead of releasing a new version immediately, we will wait one week from the date the fix was made.
-  - Reason: This waiting period allows for the inclusion of any additional bug fixes that may arise, reducing the need to release multiple consecutive versions for individual fixes.
-  - Exception: In critical cases where a bug severely impacts the functionality of the project, an immediate release might be considered.
-
-The version number will follow this format:\
-[Major Feature].[Minor Feature].[Bug Fix]
-
-## 💻 Technologies Used
-- Programming Language: [C#](https://dotnet.microsoft.com/en-us/languages/csharp) [Java](https://www.java.com/) [PHP](https://www.php.net/) [Python](https://www.python.org/)
-- Tested OS: [Ubuntu](https://ubuntu.com/)
-- Framework: [ASP.NET Core](https://dotnet.microsoft.com/en-us/apps/aspnet) (Project built with [.Net](https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet) Framework)
-- Template: Empty Views Activity
-- Android API:
-- Libraries:
-- NuGet Packages:
-- Other:
-- Recommended IDE: [Visual Studio](https://visualstudio.microsoft.com/) [NetBeans](https://netbeans.apache.org/front/main/index.html) [VS Code](https://code.visualstudio.com/) [Gedit](https://help.gnome.org/users/gedit/stable/gedit-quickstart.html.en) [Android Studio](https://developer.android.com/studio)
+## 💻 Tecnologías usadas
+- Lenguaje de programación: [Python](https://www.python.org/)
+- Framework: [seqeval](https://github.com/chakki-works/seqeval) (1.2.2)
+- Librerias:
+  - [datasets](https://pypi.org/project/datasets/) (3.3.2)
+  - [scikit-learn](https://pypi.org/project/scikit-learn/) (1.6.1)
+  - [torch](https://pypi.org/project/torch/) (2.6.0)
+  - [transformers (con PyTorch)](https://huggingface.co/docs/transformers/en/installation)
+  - [accelerate](https://pypi.org/project/accelerate/) (0.26.0)
+- IDE Recomendado: [VS Code](https://code.visualstudio.com/)
